@@ -1,0 +1,10 @@
+target(init: 'init') {
+	echo('preparing something')
+}
+
+target(hello: 'say hello') {
+  depends(init)
+  echo("Hello Gant!")	
+}
+
+setDefaultTarget(hello)
